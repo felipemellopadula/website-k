@@ -4,7 +4,11 @@ import logo from "../../assets/LogoUnity3dB.png";
 import styles from "./styles.module.scss";
 import { Menu } from "../Menu";
 
-export const Logo = () => {
+interface LogoProps {
+  onMenuToggle: () => void;
+}
+
+export const Logo: React.FC<LogoProps> = () => {
   const navigate = useNavigate();
   const [isMoved, setIsMoved] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);

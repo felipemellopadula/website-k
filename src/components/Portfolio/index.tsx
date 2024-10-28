@@ -109,7 +109,11 @@ export const portfolioItems: PortfolioItem[] = [
   },
 ];
 
-export const Portfolio = () => {
+interface PortfolioProps {
+  onMenuToggle: () => void;
+}
+
+export const Portfolio: React.FC<PortfolioProps> = () => {
   const navigate = useNavigate();
 
   const handleItemClick = (itemId: string) => {

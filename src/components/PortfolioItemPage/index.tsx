@@ -3,8 +3,13 @@ import styles from "./PortfolioItemPage.module.scss";
 import { IPortfolioItem, portfolioItemsData } from "./portfolio-items";
 import { useEffect, useState } from "react";
 import { FaWhatsapp, FaInstagram, FaFacebookF, FaTimes } from "react-icons/fa";
+import { PortfolioProps as PortfolioItemPageProps } from "./index"; // Import the PortfolioItemPageProps interface
 
-export const PortfolioItemPage = () => {
+export interface PortfolioProps {
+  onMenuToggle: () => void;
+}
+
+export const PortfolioItemPage: React.FC<PortfolioItemPageProps> = () => {
   const { itemId } = useParams<{ itemId: string }>();
   const [item, setItem] = useState<IPortfolioItem | null>(null);
 
