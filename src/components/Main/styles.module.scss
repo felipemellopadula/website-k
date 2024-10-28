@@ -1,0 +1,66 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.main {
+  width: 100%;
+  height: 100dvh;
+  position: relative;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  animation: fadeIn 1.5s ease-in-out forwards,
+    fadeOut 1s 3s ease-in-out forwards; // Atualizando o timing da animação
+
+  h1 {
+    font-family: var(--font-family1);
+    font-size: clamp(1.5rem, 0.697rem + 3.67vw, 4rem);
+    color: white;
+    font-weight: 800;
+    animation: inherit; // Herda as animações do container
+  }
+
+  p {
+    font-family: var(--font-family1);
+    font-size: clamp(1.5rem, 0.697rem + 3.67vw, 4rem);
+    color: white;
+    font-weight: 800;
+    animation: inherit; // Herda as animações do container
+  }
+}
+
+.soundIcon {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 2rem;
+  color: white;
+  z-index: 10;
+  cursor: pointer;
+}

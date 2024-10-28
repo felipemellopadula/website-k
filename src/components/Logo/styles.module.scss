@@ -1,0 +1,22 @@
+.logoContainer {
+  position: absolute;
+  top: 37%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s ease-in-out;
+  z-index: 10; // Adicione esta linha
+  &.moved {
+    top: 3%;
+    transform: translate(-50%, 0) scale(0.7);
+  }
+}
+
+.logo {
+  width: 5rem;
+  height: auto;
+  cursor: pointer; // Adiciona o cursor pointer ao logo
+
+  &:hover {
+    cursor: pointer; // Garante que o cursor pointer apareça ao passar o mouse
+  }
+}
